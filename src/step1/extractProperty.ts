@@ -1,10 +1,10 @@
 // Challenge 1.1
 
 function extractValues<ObjectType, Key extends keyof ObjectType>(
-  sourceArray: ReadonlyArray<ObjectType>,
-  targetProperty: Key
+  sourceArray: ObjectType[],
+  keyProperty: Key
 ): Array<ObjectType[Key]> {
-  return sourceArray.map((obj) => obj[targetProperty]);
+  return sourceArray.map((obj) => obj[keyProperty]);
 }
 
 const data = [
