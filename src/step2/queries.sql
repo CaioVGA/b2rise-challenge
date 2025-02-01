@@ -29,13 +29,13 @@ SELECT
     customers."name" as "customer_name",
     SUM(orders.total) as "total_compras"
 FROM orders
-JOIN customers ON orders.customer_id = customer.id
+JOIN customers ON orders.customer_id = customers.id
 GROUP BY customers.id, customers."name"
 ORDER BY total_compras DESC;
 
 -- Challenge 2.5
 
-SELECT category."name" AS category_name, 
+SELECT categories."name" AS category_name, 
        products."name" AS product_name, 
        SUM(sales.quantity) AS total_sold
 FROM sales

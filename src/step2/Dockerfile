@@ -1,2 +1,7 @@
-FROM postgres:alpine
+FROM postgres:latest
+
+ENV POSTGRES_DB=b2rise_challenge_db
+ENV POSTGRES_USER=postgres
+ENV POSTGRES_PASSWORD=postgres
+
 COPY create_tables.sql /docker-entrypoint-initdb.d/
