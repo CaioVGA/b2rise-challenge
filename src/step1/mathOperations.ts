@@ -3,7 +3,7 @@
 type MathOperationsType = (valueA: number, valueB: number) => number;
 type MathOperationsAvailables = "add" | "subtract" | "multiply" | "divide";
 
-const MATH_OPERATIONS: Record<string, MathOperationsType> = {
+const math_operations: Record<string, MathOperationsType> = {
   add: (valueA, valueB) => valueA + valueB,
   subtract: (valueA, valueB) => valueA - valueB,
   multiply: (valueA, valueB) => valueA * valueB,
@@ -18,11 +18,11 @@ function calculate(
   valueA: number,
   valueB: number
 ) {
-  return MATH_OPERATIONS[math_operation](valueA, valueB);
+  return math_operations[math_operation](valueA, valueB);
 }
 
 console.log(`${10} + ${5} = ${calculate("add", 10, 5)}`);
 console.log(`${10} - ${5} = ${calculate("subtract", 10, 5)}`);
 console.log(`${10} * ${5} = ${calculate("multiply", 10, 5)}`);
 console.log(`${10} / ${5} = ${calculate("divide", 10, 5)}`);
-console.log(calculate("divide", 10, 0));
+// console.log(calculate("divide", 10, 0));
