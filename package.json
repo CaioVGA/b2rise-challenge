@@ -29,6 +29,7 @@
   "homepage": "https://github.com/CaioVGA/b2rise-challenge#readme",
   "dependencies": {
     "cors": "^2.8.5",
+    "docker": "^1.0.0",
     "express": "^4.21.2",
     "yarn": "^1.22.22"
   },
